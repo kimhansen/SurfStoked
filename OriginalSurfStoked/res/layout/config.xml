@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/sharesurfsession">
+
+	<TabHost
+		android:id="@+id/tabHost"
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+
+	    <TabWidget
+	    	android:id="@android:id/tabs"
+	    	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"/>
+
+		<FrameLayout
+			android:id="@android:id/tabcontent"
+	    	android:paddingLeft="15dp"
+    		android:paddingRight="15dp"
+    		android:paddingTop="15dp"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<LinearLayout
+				android:id="@+id/tab1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:paddingTop="80dp">
+
+				<ScrollView
+				    android:id="@+id/ScrollView01"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:scrollbars="vertical">
+			
+				    <LinearLayout
+				        android:layout_width="fill_parent"
+				        android:orientation="vertical"
+				        android:layout_height="fill_parent">
+			
+						<TextView
+						    android:id="@+id/TextViewTitle"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+					        android:layout_marginTop="10dp"
+						    android:paddingLeft="10dp"
+						    android:textStyle="bold"
+						    android:textColor="#000000"
+						    android:text="Configure outgoing Mail Server"
+						    android:textSize="18sp"/>
+				
+					    <EditText
+					        android:id="@+id/userText"
+					        android:hint="User"
+					        android:layout_marginTop="10dp"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+				
+					    <EditText
+					        android:id="@+id/passText"
+					        android:hint="Pass"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+				
+					    <EditText
+					        android:id="@+id/hostText"
+					        android:hint="Host"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+				
+					    <EditText
+					        android:id="@+id/portText"
+					        android:hint="Port"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+				
+						<CheckBox
+						    android:id="@+id/authCheckbox"
+						    android:layout_height="wrap_content"
+						    android:text="Authentication"
+						    android:textSize="16sp"
+						    android:textStyle="bold"
+						    android:textColor="#000000"
+						    android:layout_width="fill_parent"/>
+			
+				    </LinearLayout>
+				
+				</ScrollView>
+    
+			</LinearLayout>
+     
+			<LinearLayout
+				android:id="@+id/tab2"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:paddingTop="100dp">
+
+				<ScrollView
+				    android:id="@+id/ScrollView02"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:scrollbars="vertical">
+			
+				    <LinearLayout
+				        android:layout_width="fill_parent"
+				        android:orientation="vertical"
+				        android:layout_height="fill_parent">
+			
+						<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+					        android:layout_marginTop="10dp"
+						    android:paddingLeft="10dp"
+						    android:textStyle="bold"
+						    android:textColor="#000000"
+						    android:text="Configure subject and receivers"
+						    android:textSize="18sp"/>
+				
+					    <EditText
+					        android:id="@+id/SubjectTextView"
+					        android:hint="Email subject"
+					        android:text="Check out my surf session"
+					        android:layout_marginTop="10dp"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+
+					    <EditText
+					        android:id="@+id/ReceiversTextView"
+					        android:hint="Emails for sharing.\nSeparate each email with a comma"
+					        android:lines="4"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"/>
+
+				    </LinearLayout>
+				
+				</ScrollView>
+   
+			</LinearLayout>
+
+		</FrameLayout>
+    
+	</TabHost>
+
+
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:gravity="center_horizontal">
+
+		 <Button
+		     android:layout_height="wrap_content"
+		     android:layout_width="wrap_content"
+		     style="@style/Button"
+		     android:text="Return"
+		     android:onClick="returnToStart" />
+
+		 <Button
+		     android:layout_height="wrap_content"
+		     android:layout_width="wrap_content"
+		     style="@style/Button"
+		     android:text="Save"
+		     android:layout_marginLeft="20dp"
+		     android:onClick="save" />
+
+	</LinearLayout>
+
+</LinearLayout>

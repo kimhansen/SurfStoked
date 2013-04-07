@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dp"
+    android:background="@drawable/sharesurfsession">
+
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+		android:paddingLeft="20dp"
+    	android:paddingRight="20dp"
+	    android:layout_weight="0.8"
+	    android:gravity="center_horizontal"
+	    android:paddingTop="20dp">
+
+		<ListView
+			android:id="@+id/android:list"
+			android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:background="#90542C09"
+			android:cacheColorHint="#00000000"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_weight="0.2"
+	    android:gravity="center_horizontal"
+	    android:paddingTop="20dp">
+
+		<Button
+			android:id="@+id/addSessionButton"
+			android:text="Add session"
+			style="@style/Button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+</LinearLayout>

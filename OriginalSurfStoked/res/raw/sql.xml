@@ -1,0 +1,21 @@
+<sql>
+	<statement>
+	CREATE TABLE IF NOT EXISTS sessions (
+		_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+		date DATETIME,
+		description VARCHAR(50),
+		rating INTEGER)
+	</statement>
+
+	<statement>
+	CREATE TABLE IF NOT EXISTS session_pictures (
+		_id INTEGER PRIMARY KEY AUTOINCREMENT,
+		session_id INTEGER NOT NULL,
+		picture BLOB)
+	</statement>
+
+<!--
+	<statement>INSERT INTO sessions VALUES(1, DATETIME(), "Cool session", 3)</statement>
+ -->
+
+</sql>
